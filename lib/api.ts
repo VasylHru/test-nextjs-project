@@ -1,4 +1,3 @@
-
 import axios from "axios";
 
 export type Note = {
@@ -18,19 +17,27 @@ export type NoteListResponse = {
 
 axios.defaults.baseURL = "https://next-v1-notes-api.goit.study";
 
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
 export const getNotes = async (categoryId?: string) => {
-  await delay(2000);
-  const res = await axios.get<NoteListResponse>('/notes', {
+  const res = await axios.get<NoteListResponse>("/notes", {
     params: { categoryId },
   });
   return res.data;
-}; 
-
-
+};
 
 export const getSingleNote = async (id: string) => {
   const res = await axios.get<Note>(`/notes/${id}`);
+  return res.data;
+};
+
+export type Category = {
+  id: string;
+  name: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export const getCategories = async () => {
+  const res = await axios<Category[]>("/categories");
   return res.data;
 };
