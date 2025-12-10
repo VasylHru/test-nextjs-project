@@ -1,0 +1,87 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background: #939292;
+  border: 1px solid #141414;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f41f4;
+}
+
+.label input,
+.label textarea,
+.label select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #450c0c;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #4f3737;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.label input:focus,
+.label textarea:focus,
+.label select:focus {
+  border-color: #0070f3;
+  background: #fff;
+  outline: none;
+}
+
+.label textarea {
+  min-height: 100px;
+  resize: vertical;
+  color: black;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.actions button[type="submit"] {
+  background: #0070f3;
+  color: white;
+}
+
+.actions button[type="submit"]:hover {
+  background: #0059c9;
+}
+
+.actions button[type="button"] {
+  background: #e5e5e5;
+  color: #333;
+}
+
+.actions button[type="button"]:hover {
+  background: #d4d4d4;
+}
+
+.actions button:active {
+  transform: scale(0.96);
+}
