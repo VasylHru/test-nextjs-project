@@ -1,0 +1,53 @@
+/* components/CategoriesMenu/CategoriesMenu.module.css */
+
+.menuContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.menuBtn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #111827; /* темно-сірий */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menuBtn:hover {
+  background-color: #1f2937;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  min-width: 180px;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+  list-style: none;
+  padding: 6px 0;
+  z-index: 100;
+}
+
+.menuItem {
+  padding: 0;
+}
+
+.menuItem a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: #111827;
+  font-size: 14px;
+}
+
+.menuItem a:hover {
+  background-color: #f3f4f6;
+}

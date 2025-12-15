@@ -2,6 +2,8 @@
 
 import css from './Header.module.css';
 import Link from 'next/link';
+import AuthNavigation from '../AuthNavigation/AuthNavigation';
+import CategoriesMenu from '../CategoriesMenu/CategoriesMenu';
 
 const Header = () => {
   return (
@@ -20,9 +22,11 @@ const Header = () => {
           <li>
             <Link href='/profile'>Profile</Link>
           </li>
+          <CategoriesMenu />
           <li>
             <Link href='/about'>About</Link>
           </li>
+          <AuthNavigation /> 
         </ul>
       </nav>
     </header>
